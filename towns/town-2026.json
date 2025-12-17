@@ -1,0 +1,1002 @@
+{
+  "grid": [
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      109,
+      0,
+      113,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      107,
+      0,
+      0,
+      108,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      111,
+      103,
+      116,
+      102,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      105,
+      5,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      129,
+      0,
+      120,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      105,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      131,
+      128,
+      0,
+      0,
+      119,
+      0,
+      114,
+      2,
+      0,
+      0,
+      117,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      0,
+      -1,
+      125,
+      0,
+      121,
+      0,
+      105,
+      0,
+      0,
+      0,
+      105,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      0,
+      -1,
+      127,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      4,
+      0,
+      105,
+      6,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      0,
+      130,
+      -1,
+      0,
+      122,
+      0,
+      -1,
+      -1,
+      105,
+      118,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      0,
+      123,
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ]
+  ],
+  "tileData": {
+    "10_10": {
+      "name": "Tribre Square",
+      "role": "Community Hub",
+      "bio": "The gathering place.",
+      "link": "#",
+      "actionText": "Enter Hub"
+    },
+    "9_9": {
+      "name": "Go to market, positioning, and growth",
+      "role": "Purpose",
+      "bio": "ICP focus, messaging, channel strategy, landing pages, and demand experiments. Also pricing and packaging.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "11_9": {
+      "name": "The Nurturer",
+      "role": "Community Care",
+      "bio": "Keeps the vibes high.",
+      "link": "#",
+      "actionText": "Visit Garden"
+    },
+    "9_11": {
+      "name": "The Scribe",
+      "role": "Keeper of Knowledge",
+      "bio": "Documenting the journey.",
+      "link": "#",
+      "actionText": "Read Archives"
+    },
+    "11_11": {
+      "name": "The Visionary",
+      "role": "Strategy Lead",
+      "bio": "Mapping the future.",
+      "link": "#",
+      "actionText": "View Roadmap"
+    },
+    "9_12": {
+      "name": "The Guard",
+      "role": "Security",
+      "bio": "Watching the gate.",
+      "link": "#",
+      "actionText": "View Protocols"
+    },
+    "7_10": {
+      "name": "Tech Stream",
+      "role": "Technology",
+      "bio": "Building the digital foundation and keeping it aligned the bigger eco-system.",
+      "link": "https://stewards.tribre.com/streams/technology",
+      "actionText": "Build Stack"
+    },
+    "13_10": {
+      "name": "Learning Stream",
+      "role": "Facilitate learning & growth",
+      "bio": "Crafting the educational journeys for stewards and users alike.",
+      "link": "https://stewards.tribre.com/streams/learning",
+      "actionText": "View Learning Space"
+    },
+    "10_13": {
+      "name": "Legal Stream",
+      "role": "Governance",
+      "bio": "Distributed Governance & Legal Compliance",
+      "link": "https://stewards.tribre.com/streams/governance",
+      "actionText": "View our Governance Model"
+    },
+    "10_7": {
+      "name": "Ecosystem Stream",
+      "role": "Outreach",
+      "bio": "Growing the network.",
+      "link": "https://stewards.tribre.com/streams/ecosystems",
+      "actionText": "View Ecosystems"
+    },
+    "4_11": {
+      "name": "Planetir",
+      "role": "Ecosystem Partner",
+      "bio": "A community of great people, ready to pursue roles within purpose driven organizations.",
+      "link": "https://planetir.org",
+      "actionText": "Visit Planetir"
+    },
+    "5_10": {
+      "name": "Allelo",
+      "role": "Ecosystem Partner",
+      "bio": "To be explored",
+      "link": "",
+      "actionText": ""
+    },
+    "6_8": {
+      "name": "Delta Sig",
+      "role": "Program partner",
+      "bio": "A collaboration project between Q1, DSP, and Tribre is allowing us to develop an apprenticeship program that turns available roles into a learning opportunity.",
+      "link": "https://stewards.tribre.com/projects/dsp",
+      "actionText": "Learn more"
+    },
+    "7_11": {
+      "name": "House of Finance",
+      "role": "Finance & Funding",
+      "bio": "Here Tribre takes care of it's finance and funding. We collaborate with Q1 Finance and Q1 Funding on this.",
+      "link": "https://stewards.tribre.com/streams/finance",
+      "actionText": "Action"
+    },
+    "6_11": {
+      "name": "Hypha",
+      "role": "Ecosystem Partner",
+      "bio": "Bio...",
+      "link": "#",
+      "actionText": "Action"
+    },
+    "7_9": {
+      "name": "Quorum1",
+      "role": "Ecosystem Partner",
+      "bio": "Bio...",
+      "link": "#",
+      "actionText": "Action"
+    },
+    "12_12": {
+      "name": "The Visionary",
+      "role": "Strategy Lead",
+      "bio": "Mapping the future.",
+      "link": "https://stewards.tribre.com/streams/journey",
+      "actionText": "View Journey"
+    },
+    "8_12": {
+      "name": "Customer success and implementation",
+      "role": "Purpose",
+      "bio": "Getting early teams to outcomes, capturing case studies, building playbooks, and protecting retention.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "12_9": {
+      "name": "AI product and applied LLM engineering",
+      "role": "Purpose",
+      "bio": "How context is collected, how role suggestions are generated, evaluation harnesses, guardrails, and human review workflows.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "4_13": {
+      "name": "RnD Ventures",
+      "role": "Ecosystem Partner",
+      "bio": "Bio...",
+      "link": "#",
+      "actionText": "Action"
+    },
+    "10_9": {
+      "name": "The Marketplace",
+      "role": "Value Exchange",
+      "bio": "Where the offerings and needs come together.",
+      "link": "",
+      "actionText": ""
+    },
+    "9_13": {
+      "name": "Product discovery and research",
+      "role": "Purpose",
+      "bio": "Deep customer interviews, JTBD synthesis, problem ranking, and validation loops. This is the engine for problem solution fit.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "11_12": {
+      "name": "Product management and prioritization",
+      "role": "Purpose",
+      "bio": "Turning insights into a clear roadmap, sequencing MVP, experiments, and making trade offs under uncertainty.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "12_11": {
+      "name": "UX design and content design",
+      "role": "Purpose",
+      "bio": "Role definition is cognitive work, so information architecture, writing, and onboarding are as important as UI.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "13_9": {
+      "name": "Full stack engineering and platform architecture",
+      "role": "Purpose",
+      "bio": "Multi tenant SaaS, permissions, data model for roles, performance, maintainability, and clean integration points.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "11_8": {
+      "name": "Data and analytics, experimentation",
+      "role": "Purpose",
+      "bio": "Activation and retention instrumentation, cohort analysis, and a simple but reliable experiment pipeline.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "8_11": {
+      "name": "Partnerships and ecosystem development",
+      "role": "Purpose",
+      "bio": "Integrations, communities, accelerators, training providers, and distribution partnerships.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "7_8": {
+      "name": "Smoking Tigers",
+      "role": "Purpose",
+      "bio": "Bio...",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "9_6": {
+      "name": "Organizational design and governance",
+      "role": "Purpose",
+      "bio": "Practical sociocracy, holacracy, and modern org design patterns. This keeps Tribre honest about how roles work in real teams.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "11_6": {
+      "name": "Learning science and skills development",
+      "role": "Purpose",
+      "bio": "How adults learn, deliberate practice, capability building, and what actually changes behavior on the job.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "13_5": {
+      "name": "Assessment and credential integrity",
+      "role": "Purpose",
+      "bio": "Validity and reliability basics, bias and fairness, evidence based assessment design, and alignment with open credential standards.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "14_3": {
+      "name": "People operations and labor context",
+      "role": "Purpose",
+      "bio": "Hiring realities, performance pitfalls, incentives, and the legal reality of role descriptions and HR adjacent features.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "11_4": {
+      "name": "Security, privacy, and data ethics",
+      "role": "Purpose",
+      "bio": "Especially because Tribre deals with people data, evaluation signals, and potentially sensitive workplace dynamics.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "12_3": {
+      "name": "Strategy and business model",
+      "role": "Purpose",
+      "bio": "A small group that can pressure test positioning, wedge strategy, pricing, and long term defensibility.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "10_3": {
+      "name": "Technical architecture and AI safety review",
+      "role": "Purpose",
+      "bio": "Independent eyes on model evaluation, failure modes, and whether the product is becoming brittle or overly complex.",
+      "link": "#",
+      "actionText": "Explore"
+    },
+    "9_4": {
+      "name": "Brand and narrative",
+      "role": "Purpose",
+      "bio": "A clear story that fits your audience and category, and protects you from becoming “yet another HR tool”.",
+      "link": "#",
+      "actionText": "Explore"
+    }
+  },
+  "customAssets": [
+    {
+      "id": 100,
+      "name": "tile-allelo",
+      "icon": "https://town.trib.re/assets/tiles/tile-allelo.png",
+      "isCustom": true
+    },
+    {
+      "id": 101,
+      "name": "tile-books",
+      "icon": "https://town.trib.re/assets/tiles/tile-books.png",
+      "isCustom": true
+    },
+    {
+      "id": 102,
+      "name": "tile-finance",
+      "icon": "https://town.trib.re/assets/tiles/tile-finance.png",
+      "isCustom": true
+    },
+    {
+      "id": 103,
+      "name": "tile-hive",
+      "icon": "https://town.trib.re/assets/tiles/tile-hive.png",
+      "isCustom": true
+    },
+    {
+      "id": 104,
+      "name": "tile-house-a",
+      "icon": "https://town.trib.re/assets/tiles/tile-house-a.png",
+      "isCustom": true
+    },
+    {
+      "id": 105,
+      "name": "tile-house-b",
+      "icon": "https://town.trib.re/assets/tiles/tile-house-b.png",
+      "isCustom": true
+    },
+    {
+      "id": 106,
+      "name": "tile-house-c",
+      "icon": "https://town.trib.re/assets/tiles/tile-house-c.png",
+      "isCustom": true
+    },
+    {
+      "id": 107,
+      "name": "tile-house-dsp",
+      "icon": "https://town.trib.re/assets/tiles/tile-house-dsp.png",
+      "isCustom": true
+    },
+    {
+      "id": 108,
+      "name": "tile-hypha",
+      "icon": "https://town.trib.re/assets/tiles/tile-hypha.png",
+      "isCustom": true
+    },
+    {
+      "id": 109,
+      "name": "tile-planetir",
+      "icon": "https://town.trib.re/assets/tiles/tile-planetir.png",
+      "isCustom": true
+    },
+    {
+      "id": 110,
+      "name": "tile-rnd-launch",
+      "icon": "https://town.trib.re/assets/tiles/tile-rnd-launch.png",
+      "isCustom": true
+    },
+    {
+      "id": 111,
+      "name": "tile-smoking-tigers",
+      "icon": "https://town.trib.re/assets/tiles/tile-smoking-tigers.png",
+      "isCustom": true
+    },
+    {
+      "id": 112,
+      "name": "tile-rnd-skyscraper",
+      "icon": "https://town.trib.re/assets/tiles/tile-rnd-skyscraper.png",
+      "isCustom": true
+    },
+    {
+      "id": 113,
+      "name": "tile-rnd-launchpad",
+      "icon": "https://town.trib.re/assets/tiles/tile-rnd-launchpad.png",
+      "isCustom": true
+    },
+    {
+      "id": 114,
+      "name": "tile-marketplace",
+      "icon": "https://town.trib.re/assets/tiles/tile-marketplace.png",
+      "isCustom": true
+    },
+    {
+      "id": 115,
+      "name": "tile-steam-a",
+      "icon": "https://town.trib.re/assets/tiles/tile-steam-a.png",
+      "isCustom": true
+    },
+    {
+      "id": 116,
+      "name": "tile-stream-a",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-a.png",
+      "isCustom": true
+    },
+    {
+      "id": 117,
+      "name": "tile-stream-b",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-b.png",
+      "isCustom": true
+    },
+    {
+      "id": 118,
+      "name": "tile-stream-c",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-c.png",
+      "isCustom": true
+    },
+    {
+      "id": 119,
+      "name": "tile-stream-mountain",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-mountain.png",
+      "isCustom": true
+    },
+    {
+      "id": 120,
+      "name": "tile-stream-expertise-a",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-expertise-a.png",
+      "isCustom": true
+    },
+    {
+      "id": 121,
+      "name": "tile-oracle-a",
+      "icon": "https://town.trib.re/assets/tiles/tile-oracle-a.png",
+      "isCustom": true
+    },
+    {
+      "id": 122,
+      "name": "tile-stream-philosophers",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-philosophers.png",
+      "isCustom": true
+    },
+    {
+      "id": 123,
+      "name": "tile-stream-msn",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-msn.png",
+      "isCustom": true
+    },
+    {
+      "id": 124,
+      "name": "tile-stream-guildhall",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-guildhall.png",
+      "isCustom": true
+    },
+    {
+      "id": 125,
+      "name": "tile-stream-guild",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-guild.png",
+      "isCustom": true
+    },
+    {
+      "id": 126,
+      "name": "tile-stream-ritual-hall",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-ritual-hall.png",
+      "isCustom": true
+    },
+    {
+      "id": 127,
+      "name": "tile-stream-atelier",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-atelier.png",
+      "isCustom": true
+    },
+    {
+      "id": 128,
+      "name": "tile-stream-forge",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-forge.png",
+      "isCustom": true
+    },
+    {
+      "id": 129,
+      "name": "tile-stream-exemplars",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-exemplars.png",
+      "isCustom": true
+    },
+    {
+      "id": 130,
+      "name": "tile-stream-a2",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-a2.png",
+      "isCustom": true
+    },
+    {
+      "id": 131,
+      "name": "tile-stream-living-knowledge",
+      "icon": "https://town.trib.re/assets/tiles/tile-stream-living-knowledge.png",
+      "isCustom": true
+    }
+  ],
+  "assetConfigs": {
+    "0": {
+      "src": "https://town.trib.re/assets/tiles/tile_grass.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50
+    },
+    "1": {
+      "src": "https://town.trib.re/assets/tiles/tile-clock-building.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50
+    },
+    "2": {
+      "src": "https://town.trib.re/assets/tiles/tile-wisdom-square.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50
+    },
+    "3": {
+      "src": "https://town.trib.re/assets/tiles/tile-trees.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50,
+      "style": {
+        "filter": "hue-rotate(180deg) saturate(1.2)"
+      }
+    },
+    "4": {
+      "src": "https://town.trib.re/assets/tiles/tile-house-a.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50
+    },
+    "5": {
+      "src": "https://town.trib.re/assets/tiles/tile-books.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50
+    },
+    "6": {
+      "src": "https://town.trib.re/assets/tiles/tile-observatory.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50
+    },
+    "1001": {
+      "src": "https://town.trib.re/assets/tiles/tile-trees.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50
+    },
+    "1002": {
+      "src": "https://town.trib.re/assets/tiles/tile-pond.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50,
+      "marginLeft": 10
+    },
+    "1003": {
+      "src": "https://town.trib.re/assets/tiles/tile-flowers.png",
+      "width": 100,
+      "height": 100,
+      "marginTop": -50
+    }
+  },
+  "cloudImage": ""
+}
