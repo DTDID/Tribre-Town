@@ -1,0 +1,18 @@
+[
+  {
+    "id": "main",
+    "name": "Main Town",
+    "isDefault": false,
+    "isPublic": false,
+    "lastModified": 1740000000000,
+    "fileUrl": "towns/main.json"
+  },
+  {
+    "id": "town-2026",
+    "name": "Town 2026",
+    "isDefault": true,
+    "isPublic": true,
+    "lastModified": 1740000000000,
+    "fileUrl": "towns/town-2026.json"
+  }
+]
