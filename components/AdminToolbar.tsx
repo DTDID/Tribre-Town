@@ -1,9 +1,9 @@
-
 import React, { useState, useMemo, useRef } from 'react';
 import { TOOLS, THEMED_ASSETS, TOOL_SELECT_ID } from '../constants';
 import { CustomAsset, AssetConfig, TownVersion, StewardData } from '../types';
+import { APP_VERSION, CHANGELOG } from '../changelog';
 // Added X and PlusCircle to the lucide-react import list
-import { Download, Upload, Save, ImagePlus, MousePointer2, Map as MapIcon, Hammer, LayoutGrid, Plus, Trash2, Check, Star, Globe, Eye, FolderOpen, PackagePlus, HardDrive, FileJson, Link, ChevronDown, ChevronRight, Lock, Unlock, Link2, Tag, FilterX, Image as ImageIcon, X, PlusCircle } from 'lucide-react';
+import { Download, Upload, Save, ImagePlus, MousePointer2, Map as MapIcon, Hammer, LayoutGrid, Plus, Trash2, Check, Star, Globe, Eye, FolderOpen, PackagePlus, HardDrive, FileJson, Link, ChevronDown, ChevronRight, Lock, Unlock, Link2, Tag, FilterX, Image as ImageIcon, X, PlusCircle, History } from 'lucide-react';
 
 interface AdminToolbarProps {
   currentView: string;
@@ -64,6 +64,8 @@ const AdminToolbar: React.FC<AdminToolbarProps> = ({
   const [showSaveAs, setShowSaveAs] = useState(false);
   const [showAddAsset, setShowAddAsset] = useState(false);
   const [remoteAssetUrl, setRemoteAssetUrl] = useState('');
+  const [showChangelog, setShowChangelog] = useState(false);
+
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const [showLinkTown, setShowLinkTown] = useState(false);
@@ -265,6 +267,39 @@ const AdminToolbar: React.FC<AdminToolbarProps> = ({
                  <button type="submit" className="w-full bg-[#e94560] hover:bg-[#ff5773] text-white text-xs py-1.5 rounded font-bold"> Confirm & Add </button>
              </form>
          )}
+
+         {/* Version & Changelog Section */}
+         <div className="mt-3 pt-2 border-t border-white/5">
+             <button 
+                onClick={() => setShowChangelog(!showChangelog)}
+                className="w-full flex items-center justify-between text-[9px] text-gray-500 hover:text-gray-300 transition-colors group"
+             >
+                 <span className="font-mono opacity-70">v{APP_VERSION}</span>
+                 <div className="flex items-center gap-1">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-wider font-bold">Changelog</span>
+                    {showChangelog ? <ChevronDown size={10} /> : <History size={10} />}
+                 </div>
+             </button>
+
+             {showChangelog && (
+                 <div className="mt-2 space-y-3 max-h-32 overflow-y-auto custom-scrollbar pr-1 bg-[#1a1a2e]/50 p-2 rounded border border-white/5 animate-in slide-in-from-top-1">
+                     {CHANGELOG.map((log) => (
+                         <div key={log.version} className="space-y-1">
+                             <div className="flex justify-between items-baseline text-[9px] font-bold text-gray-400 border-b border-white/5 pb-1 mb-1">
+                                 <span className="text-[#e94560] font-mono">v{log.version}</span>
+                                 <span className="text-gray-600">{log.date}</span>
+                             </div>
+                             <ul className="list-disc list-inside text-[9px] text-gray-500 leading-tight space-y-0.5 ml-1">
+                                 {log.changes.map((change, i) => (
+                                     <li key={i} className="pl-1 -indent-1.5 ml-1.5">{change}</li>
+                                 ))}
+                             </ul>
+                         </div>
+                     ))}
+                 </div>
+             )}
+         </div>
+
       </div>
     </div>
   );
