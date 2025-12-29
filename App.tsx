@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { INITIAL_GRID, INITIAL_STEWARD_DATA, INITIAL_ASSET_CONFIGS, INITIAL_CUSTOM_ASSETS, TOOL_SELECT_ID, TOOLS, TILE_WIDTH, TILE_HEIGHT, THEMED_ASSETS } from './constants';
 import { DEFAULT_TOWN_DATA } from './defaultTownData';
@@ -5,7 +6,6 @@ import { CameraState, CustomAsset, StewardData, AssetConfig, TownVersion } from 
 import Tile from './components/Tile';
 import AdminToolbar from './components/AdminToolbar';
 import CloudLayer from './components/CloudLayer';
-import LoginModal from './components/LoginModal';
 import UserMenu from './components/UserMenu';
 import { useAuth } from './contexts/AuthContext';
 import { fetchTownManifest, fetchTownContent, downloadTownData, downloadManifest } from './services/db';
@@ -38,10 +38,8 @@ const App: React.FC = () => {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   // --- AUTH & DB STATE ---
-  const { user, hasRole, login, isDemo } = useAuth();
-  const [showLoginModal, setShowLoginModal] = useState(false);
+  const { user, hasRole, login } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-  const [showTownSwitcher, setShowTownSwitcher] = useState(false);
 
   // --- BACKGROUND STATE ---
   const [bgStyle, setBgStyle] = useState<React.CSSProperties>({ backgroundColor: '#1a1a2e' });
@@ -71,7 +69,20 @@ const App: React.FC = () => {
     const init = async () => {
         setIsLoading(true);
         try {
-            const versions = await fetchTownManifest();
+            let versions = await fetchTownManifest();
+            
+            // SANITIZATION: Ensure only one default exists. 
+            // If multiple are true in JSON, keep the first one found and set others to false.
+            let foundDefault = false;
+            versions = versions.map(v => {
+                if (v.isDefault) {
+                    if (foundDefault) return { ...v, isDefault: false };
+                    foundDefault = true;
+                    return v;
+                }
+                return v;
+            });
+            
             setTownVersions(versions);
             const defaultTown = versions.find(v => v.isDefault) || versions[0];
             if (defaultTown) await loadTownContent(defaultTown, versions);
@@ -114,8 +125,34 @@ const App: React.FC = () => {
       await loadTownContent(town, townVersions);
       setEditMode(false);
       setIsSidebarOpen(false);
-      setShowTownSwitcher(false);
       setActiveFilters([]); 
+  };
+
+  const handleSetDefault = (id: string) => {
+    // Logic: Only Public maps can be set as default.
+    // Logic: Setting one as default unsets others.
+    const town = townVersions.find(v => v.id === id);
+    if (!town || !town.isPublic) return;
+
+    setTownVersions(prev => prev.map(v => ({
+      ...v,
+      isDefault: v.id === id
+    })));
+  };
+
+  const handleTogglePublic = (id: string) => {
+    setTownVersions(prev => prev.map(v => {
+      if (v.id === id) {
+        const nextState = !v.isPublic;
+        return { 
+          ...v, 
+          isPublic: nextState,
+          // Logic: Private maps cannot be default. If turning private, unset default.
+          isDefault: nextState ? v.isDefault : false
+        };
+      }
+      return v;
+    }));
   };
 
   // --- CAMERA LOGIC ---
@@ -238,12 +275,11 @@ const App: React.FC = () => {
   // --- UI HELPERS ---
   const selectedType = selectedCoord ? grid[selectedCoord.x][selectedCoord.y] : 0;
   const canEdit = hasRole('admin');
-  const visibleTowns = canEdit ? townVersions : townVersions.filter(t => t.isPublic);
-  const currentTownName = townVersions.find(t => t.id === currentTownId)?.name || "Town Builder";
-
+  
   const availableLabels = useMemo(() => {
     const labels = new Set<string>(Object.keys(THEMED_ASSETS));
-    Object.values(tileData).forEach(data => { if (data.labels) data.labels.forEach(l => labels.add(l)); });
+    // Explicitly cast to StewardData[] because Object.values might be inferred as unknown[]
+    (Object.values(tileData) as StewardData[]).forEach(data => { if (data.labels) data.labels.forEach(l => labels.add(l)); });
     return Array.from(labels).sort();
   }, [tileData]);
 
@@ -279,16 +315,35 @@ const App: React.FC = () => {
       </div>
 
       <div className="ui-layer pointer-events-none absolute inset-0 z-50">
-        <UserMenu onLoginClick={() => { if (isDemo) login(); else setShowLoginModal(true); }} />
+        <UserMenu onLoginClick={login} />
 
-        {!showLoginModal && !isLoading && (
-            <div className="pointer-events-auto fixed top-5 left-5 flex items-center gap-6 z-[60] animate-in slide-in-from-left duration-500">
+        {!isLoading && (
+            <div className="pointer-events-auto fixed top-5 left-5 flex items-center gap-4 z-[60] animate-in slide-in-from-left duration-500">
                 {!canEdit && !editMode && (
-                  <div className="flex-shrink-0 select-none">
-                      <img src="https://town.trib.re/assets/tribre-town-sign.png" alt="Sign" className="hidden md:block h-64 w-auto filter drop-shadow-lg" />
-                      <img src="https://town.trib.re/assets/tribre-town-hex.png" alt="Hex" className="block md:hidden h-12 w-auto filter drop-shadow-lg" />
+                  <div className="flex-shrink-0 select-none mr-2 hidden md:block">
+                      <img src="https://town.trib.re/assets/tribre-town-sign.png" alt="Sign" className="h-48 w-auto filter drop-shadow-lg" />
                   </div>
                 )}
+                
+                {/* Visitor Town Navigation */}
+                 <div className="bg-[#1e1e2e]/90 backdrop-blur-md border border-[#444] rounded-lg p-1 pl-2 flex items-center gap-2 shadow-xl">
+                     <MapIcon size={14} className="text-[#e94560]" />
+                     <div className="relative">
+                         <select 
+                           value={currentTownId} 
+                           onChange={(e) => handleLoadTown(e.target.value)}
+                           className="appearance-none bg-transparent text-xs font-bold text-gray-200 outline-none py-1.5 pr-6 cursor-pointer min-w-[140px] hover:text-white transition-colors"
+                         >
+                           {townVersions.filter(v => v.isPublic || canEdit).map(v => (
+                             <option key={v.id} value={v.id} className="bg-[#1e1e2e] text-gray-300">
+                                {v.name} {v.isDefault ? '(Home)' : ''} {(!v.isPublic && canEdit) ? '(Private)' : ''}
+                             </option>
+                           ))}
+                         </select>
+                         <ChevronDown size={12} className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
+                     </div>
+                </div>
+
                 {canEdit && (
                     <button onClick={() => { setEditMode(!editMode); if (!editMode) setCurrentTool(TOOL_SELECT_ID); else setIsSidebarOpen(false); }} className={`px-4 py-2 rounded-lg font-bold shadow-lg transition-all flex items-center gap-2 ${editMode ? 'bg-[#e94560] border border-[#ff6b81]' : 'bg-[#2a2a40] border border-[#4a4a60] hover:bg-[#3a3a50]'}`}>
                         {editMode ? <Check size={18} /> : <Hammer size={18} />} {editMode ? 'Done' : 'Edit'}
@@ -304,7 +359,8 @@ const App: React.FC = () => {
                     onUploadAsset={handleUploadAsset} onAddRemoteAsset={handleAddRemoteAsset} 
                     onSaveUpdate={() => downloadTownData('town.json', { grid, tileData, customAssets, assetConfigs, cloudImage })}
                     onSaveAs={(name) => {}} onRegisterTown={(n, p) => {}} onDownloadManifest={() => downloadManifest(townVersions)} onExport={() => {}} onImport={() => {}} cloudImage={cloudImage} onCloudImageChange={setCloudImage}
-                    versions={townVersions} currentTownId={currentTownId} onLoadTown={handleLoadTown} onSetDefault={() => {}} onTogglePublic={() => {}} onDeleteTown={() => {}}
+                    versions={townVersions} currentTownId={currentTownId} onLoadTown={handleLoadTown} 
+                    onSetDefault={handleSetDefault} onTogglePublic={handleTogglePublic} onDeleteTown={() => {}}
                     tileData={tileData} activeFilters={activeFilters} onToggleFilter={toggleGlobalFilter} onClearFilters={() => setActiveFilters([])}
                 />
             </div>
@@ -374,7 +430,6 @@ const App: React.FC = () => {
                 )}
             </div>
         </div>
-        {showLoginModal && <LoginModal onClose={() => setShowLoginModal(false)} />}
       </div>
     </div>
   );

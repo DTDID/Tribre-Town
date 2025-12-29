@@ -12,8 +12,6 @@ const getEnv = (key: string) => {
   }
 };
 
-export const CLERK_PUBLISHABLE_KEY = getEnv('CLERK_PUBLISHABLE_KEY') || "";
-
 // --- ASSETS (UI PALETTE REFERENCES) ---
 const ASSETS = {
   GRASS: "https://town.trib.re/assets/tiles/tile_grass.png", 

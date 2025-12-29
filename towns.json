@@ -1,18 +1,34 @@
 [
   {
-    "id": "main",
-    "name": "Main Town",
+    "id": "town-2026",
+    "name": "Town 2026",
     "isDefault": false,
     "isPublic": false,
     "lastModified": 1740000000000,
-    "fileUrl": "towns/main.json"
+    "fileUrl": "towns/town-2026.json"
   },
   {
-    "id": "town-2026",
-    "name": "Town 2026",
+    "id": "town-2025",
+    "name": "Town 2025",
+    "isDefault": false,
+    "isPublic": false,
+    "lastModified": 1740000000000,
+    "fileUrl": "towns/town-2025.json"
+  },
+  {
+    "id": "tribre-town-2025",
+    "name": "Tribre Town",
     "isDefault": true,
     "isPublic": true,
     "lastModified": 1740000000000,
-    "fileUrl": "towns/town-2026.json"
+    "fileUrl": "towns/tribre-town-2025.json"
+  },
+  {
+    "id": "town-regenos",
+    "name": "Town RegenOS",
+    "isDefault": false,
+    "isPublic": true,
+    "lastModified": 1740000000000,
+    "fileUrl": "towns/town-regenos.json"
   }
 ]

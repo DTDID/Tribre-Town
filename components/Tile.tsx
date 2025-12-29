@@ -51,12 +51,13 @@ const Tile: React.FC<TileProps> = ({ x, y, type, isEditing, assetConfigs, custom
         let mt = -50;
         let ml = 0;
 
-        if (val < 0.15) {
+        // Update chances: Mostly Trees (22%), then Flowers (10%), then Pond (3%)
+        if (val < 0.22) {
             decorSrc = "https://town.trib.re/assets/tiles/tile-trees.png";
-        } else if (val < 0.25) {
-            decorSrc = "https://town.trib.re/assets/tiles/tile-pond.png";
-        } else {
+        } else if (val < 0.32) {
             decorSrc = "https://town.trib.re/assets/tiles/tile-flowers.png";
+        } else {
+            decorSrc = "https://town.trib.re/assets/tiles/tile-pond.png";
         }
         
         DecorComponent = (

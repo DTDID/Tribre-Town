@@ -94,7 +94,8 @@ const AdminToolbar: React.FC<AdminToolbarProps> = ({
   const labelStats = useMemo(() => {
     const stats: Record<string, number> = {};
     Object.keys(THEMED_ASSETS).forEach(cat => stats[cat] = 0);
-    Object.values(tileData).forEach(data => {
+    // Explicitly cast to StewardData[] because Object.values might be inferred as unknown[]
+    (Object.values(tileData) as StewardData[]).forEach(data => {
       if (data.labels) { data.labels.forEach(l => { stats[l] = (stats[l] || 0) + 1; }); }
     });
     return Object.entries(stats).sort((a, b) => b[1] - a[1]);
@@ -173,15 +174,39 @@ const AdminToolbar: React.FC<AdminToolbarProps> = ({
         </div>
 
         <div className="space-y-2 pr-1 mb-4">
-            {versions.map(v => (
+            {versions.map(v => {
+                const isPrivate = !v.isPublic;
+                return (
                 <div key={v.id} className={`p-2 rounded-lg border ${v.id === currentTownId ? 'bg-[#0f3460] border-[#e94560]' : 'bg-[#222] border-[#444]'} transition-all`}>
                     <div className="flex items-center justify-between mb-1">
                         <span className="font-bold text-xs truncate flex-1" title={v.name}>{v.name}</span>
                         {v.id !== currentTownId && ( <button onClick={() => onLoadTown(v.id)} className="text-[9px] bg-[#333] hover:bg-[#444] px-2 py-0.5 rounded text-white flex items-center gap-1"> <Eye size={10} /> Load </button> )}
                         {v.id === currentTownId && <span className="text-[9px] text-[#e94560] font-bold bg-[#e94560]/20 px-1.5 py-0.5 rounded">Active</span>}
                     </div>
+                    {/* Admin Controls */}
+                    <div className="flex items-center gap-2 mt-2 border-t border-white/10 pt-2">
+                        <button 
+                            onClick={() => onSetDefault(v.id)} 
+                            disabled={v.isDefault || isPrivate} 
+                            className={`flex-1 text-[9px] flex items-center justify-center gap-1 py-1 rounded transition-colors 
+                                ${v.isDefault 
+                                    ? 'text-yellow-400 bg-yellow-400/10 cursor-default' 
+                                    : isPrivate 
+                                        ? 'text-gray-600 cursor-not-allowed opacity-50' 
+                                        : 'text-gray-500 hover:text-gray-300 hover:bg-white/5'
+                                }`}
+                            title={isPrivate ? "Make public first to set as default" : ""}
+                        >
+                            <Star size={10} fill={v.isDefault ? "currentColor" : "none"} /> {v.isDefault ? 'Default' : 'Set Default'}
+                        </button>
+                        <div className="w-px h-3 bg-white/10"></div>
+                        <button onClick={() => onTogglePublic(v.id)} className={`flex-1 text-[9px] flex items-center justify-center gap-1 py-1 rounded transition-colors ${v.isPublic ? 'text-emerald-400 bg-emerald-400/10' : 'text-gray-500 hover:text-gray-300 hover:bg-white/5'}`}>
+                            {v.isPublic ? <Globe size={10} /> : <Lock size={10} />} {v.isPublic ? 'Public' : 'Private'}
+                        </button>
+                    </div>
                 </div>
-            ))}
+                );
+            })}
         </div>
         
         {showLinkTown ? (
