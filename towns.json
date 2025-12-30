@@ -1,13 +1,5 @@
 [
   {
-    "id": "town-2026",
-    "name": "Town 2026",
-    "isDefault": false,
-    "isPublic": false,
-    "lastModified": 1740000000000,
-    "fileUrl": "towns/town-2026.json"
-  },
-  {
     "id": "town-2025",
     "name": "Town 2025",
     "isDefault": false,
@@ -22,6 +14,14 @@
     "isPublic": true,
     "lastModified": 1740000000000,
     "fileUrl": "towns/tribre-town-2025.json"
+  },
+  {
+    "id": "town-2026",
+    "name": "Town 2026",
+    "isDefault": false,
+    "isPublic": false,
+    "lastModified": 1740000000000,
+    "fileUrl": "towns/town-2026.json"
   },
   {
     "id": "town-regenos",
